@@ -1,7 +1,7 @@
 <%= semantic_form_for @loan do |f| %>
   <%= f.inputs do %>
-    <%= f.input :user_id %>
-    <%= f.input :bookwork_id %>
+    <%= f.input :user, :member_label => :full_name  %>
+    <%= f.input :bookwork, :member_label => :title %>
   <% end %>
 
   <%= f.actions do %>

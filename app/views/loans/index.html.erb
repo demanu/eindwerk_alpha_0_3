@@ -1,6 +1,6 @@
 <h1>Listing loans</h1>
 
-<table>
+<table border=1>
   <tr>
     <th>User</th>
     <th>Bookwork</th>
@@ -11,8 +11,8 @@
 
 <% @loans.each do |loan| %>
   <tr>
-    <td><%= loan.user_id %></td>
-    <td><%= loan.bookwork_id %></td>
+    <td><%= loan.user.full_name %></td>
+    <td><%= loan.bookwork.title %></td>
     <td><%= link_to 'Show', loan %></td>
     <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
     <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
