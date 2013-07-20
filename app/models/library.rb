@@ -4,4 +4,8 @@ class Library < ActiveRecord::Base
   #relations
   has_many :bookworks
   belongs_to :campus_detail
+
+  def library_details
+    [name, campus_detail.name].join(" ")
+  end
 end

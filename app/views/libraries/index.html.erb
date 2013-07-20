@@ -1,8 +1,10 @@
 <h1>Listing libraries</h1>
 
-<table>
+<table border=1>
   <tr>
     <th>Name</th>
+    <th>Campus</th>
+    <th>lokaal</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,6 +13,8 @@
 <% @libraries.each do |library| %>
   <tr>
     <td><%= library.name %></td>
+    <td><%= library.campus_detail.name %></td>
+    <td><%= library.room %></td>
     <td><%= link_to 'Show', library %></td>
     <td><%= link_to 'Edit', edit_library_path(library) %></td>
     <td><%= link_to 'Destroy', library, method: :delete, data: { confirm: 'Are you sure?' } %></td>
