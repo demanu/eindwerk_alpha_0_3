@@ -1,4 +1,10 @@
 EindwerkAlpha03::Application.routes.draw do
+  resources :campus_details
+
+
+  resources :libraries
+
+
   resources :loans
 
 

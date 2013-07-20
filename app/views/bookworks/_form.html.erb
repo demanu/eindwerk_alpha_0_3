@@ -1,6 +1,7 @@
 <%= semantic_form_for @bookwork do |f| %>
   <%= f.inputs do %>
     <%= f.input :title %>
+    <%= f.input :library_id, :as => :select, :collection => Library.all %>
   <% end %>
 
   <%= f.actions do %>

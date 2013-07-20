@@ -1,4 +1,5 @@
 class LoansController < ApplicationController
+
   # GET /loans
   # GET /loans.json
   def index
@@ -42,15 +43,15 @@ class LoansController < ApplicationController
   def create
     @loan = Loan.new(params[:loan])
 
-    respond_to do |format|
-      if @loan.save
-        format.html { redirect_to @loan, notice: 'Loan was successfully created.' }
-        format.json { render json: @loan, status: :created, location: @loan }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @loan.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @loan.save
+          format.html { redirect_to @loan, notice: 'Loan was successfully created.' }
+          format.json { render json: @loan, status: :created, location: @loan }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @loan.errors, status: :unprocessable_entity }
+        end
       end
-    end
   end
 
   # PUT /loans/1
@@ -80,4 +81,6 @@ class LoansController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 end
