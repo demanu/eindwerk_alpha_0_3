@@ -2,6 +2,7 @@
   <%= f.inputs do %>
     <%= f.input :title %>
     <%= f.input :library_id, :as => :select, :collection => Library.all %>
+    <%= f.input :bookstore_id, :as => :select, :collection => Bookstore.all %>
   <% end %>
 
   <%= f.actions do %>

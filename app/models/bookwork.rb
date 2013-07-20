@@ -1,5 +1,5 @@
 class Bookwork < ActiveRecord::Base
-  attr_accessible :title, :library_id
+  attr_accessible :title, :library_id, :bookstore_id
 
   #relations
   has_many :loans

@@ -1,4 +1,7 @@
 EindwerkAlpha03::Application.routes.draw do
+  resources :book_formats
+
+
   resources :publishers
 
 
