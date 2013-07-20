@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @bookstore.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @bookstore.address %>
+</p>
+
+
+<%= link_to 'Edit', edit_bookstore_path(@bookstore) %> |
+<%= link_to 'Back', bookstores_path %>

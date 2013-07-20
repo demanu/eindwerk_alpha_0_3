@@ -4,5 +4,6 @@ class Bookwork < ActiveRecord::Base
   #relations
   has_many :loans
   has_many :users, :through => :loans
+  has_many :book_editions
   belongs_to :library
 end

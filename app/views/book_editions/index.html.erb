@@ -1,0 +1,29 @@
+<h1>Listing book_editions</h1>
+
+<table>
+  <tr>
+    <th>Isbn nr</th>
+    <th>Format</th>
+    <th>Bookwork</th>
+    <th>Publisher</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @book_editions.each do |book_edition| %>
+  <tr>
+    <td><%= book_edition.isbn_nr %></td>
+    <td><%= book_edition.format %></td>
+    <td><%= book_edition.bookwork_id %></td>
+    <td><%= book_edition.publisher_id %></td>
+    <td><%= link_to 'Show', book_edition %></td>
+    <td><%= link_to 'Edit', edit_book_edition_path(book_edition) %></td>
+    <td><%= link_to 'Destroy', book_edition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Book edition', new_book_edition_path %>

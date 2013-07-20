@@ -5,6 +5,7 @@ class Library < ActiveRecord::Base
   has_many :bookworks
   belongs_to :campus_detail
 
+  public
   def library_details
     [name, campus_detail.name].join(" ")
   end

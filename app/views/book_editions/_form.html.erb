@@ -1,0 +1,12 @@
+<%= semantic_form_for @book_edition do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :isbn_nr %>
+    <%= f.input :format %>
+    <%= f.input :bookwork_id %>
+    <%= f.input :publisher_id %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

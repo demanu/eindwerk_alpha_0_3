@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Library</th>
+    <th>Library details</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,7 +12,7 @@
 <% @bookworks.each do |bookwork| %>
   <tr>
     <td><%= bookwork.title %></td>
-    <td><%= bookwork.library.name %></td>
+    <td><%= bookwork.library_id %></td>
     <td><%= link_to 'Show', bookwork %></td>
     <td><%= link_to 'Edit', edit_bookwork_path(bookwork) %></td>
     <td><%= link_to 'Destroy', bookwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>

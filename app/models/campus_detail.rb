@@ -3,4 +3,5 @@ class CampusDetail < ActiveRecord::Base
 
   #relations
   has_many :libraries
+
 end

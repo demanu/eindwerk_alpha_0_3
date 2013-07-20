@@ -1,4 +1,13 @@
 EindwerkAlpha03::Application.routes.draw do
+  resources :publishers
+
+
+  resources :book_editions
+
+
+  resources :bookstores
+
+
   resources :campus_details
 
 
