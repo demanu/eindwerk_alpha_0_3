@@ -3,5 +3,5 @@ class Author < ActiveRecord::Base
 
   #relations
   has_many :participants
-  has_many :author_roles, through: => :participants
+  has_many :author_roles, :through => :participants
 end

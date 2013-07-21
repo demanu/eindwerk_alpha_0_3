@@ -14,6 +14,7 @@ class BookworksController < ApplicationController
   # GET /bookworks/1.json
   def show
     @bookwork = Bookwork.find(params[:id])
+    @book_participants = Participant.find_all_by_bookwork_id(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

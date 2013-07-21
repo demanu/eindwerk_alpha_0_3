@@ -12,9 +12,9 @@
 
 <% @participants.each do |participant| %>
   <tr>
-    <td><%= participant.author_id %></td>
-    <td><%= participant.author_role_id %></td>
-    <td><%= participant.bookwork_id %></td>
+    <td><%= participant.author.name %></td>
+    <td><%= participant.author_role.role %></td>
+    <td><%= participant.bookwork.title %></td>
     <td><%= link_to 'Show', participant %></td>
     <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
     <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>

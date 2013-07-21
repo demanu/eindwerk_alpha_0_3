@@ -5,7 +5,19 @@
   <%= @bookwork.title %>
 </p>
 <p>
-  <b>Isbn nr</b>
+    <table border=1>
+  <tr>
+    <th>name</th>
+    <th>role</th>
+  </tr>
+
+  <% @book_participants.each do |book_participant| %>
+      <tr>
+        <td><%= book_participant.author.name %></td>
+        <td><%= book_participant.author_role.role %></td>
+      </tr>
+  <% end %>
+</table>
 
 </p>
 

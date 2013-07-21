@@ -4,4 +4,5 @@ class Participant < ActiveRecord::Base
   #relations
   belongs_to :author_role
   belongs_to :author
+  belongs_to :bookwork
 end
