@@ -1,0 +1,23 @@
+<h1>Listing author_roles</h1>
+
+<table>
+  <tr>
+    <th>Role</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @author_roles.each do |author_role| %>
+  <tr>
+    <td><%= author_role.role %></td>
+    <td><%= link_to 'Show', author_role %></td>
+    <td><%= link_to 'Edit', edit_author_role_path(author_role) %></td>
+    <td><%= link_to 'Destroy', author_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Author role', new_author_role_path %>

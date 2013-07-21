@@ -1,4 +1,13 @@
 EindwerkAlpha03::Application.routes.draw do
+  resources :participants
+
+
+  resources :author_roles
+
+
+  resources :authors
+
+
   resources :book_formats
 
 
