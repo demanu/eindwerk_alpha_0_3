@@ -15,6 +15,7 @@ class BookworksController < ApplicationController
   def show
     @bookwork = Bookwork.find(params[:id])
     @book_participants = Participant.find_all_by_bookwork_id(params[:id])
+    @book_editions = BookEdition.find_all_by_bookwork_id(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -36,6 +37,7 @@ class BookworksController < ApplicationController
   # GET /bookworks/1/edit
   def edit
     @bookwork = Bookwork.find(params[:id])
+    @book_participants = Participant.find_all_by_bookwork_id(params[:id])
   end
 
   # POST /bookworks

@@ -13,8 +13,8 @@
 <% @bookworks.each do |bookwork| %>
   <tr>
     <td><%= bookwork.title %></td>
-    <td><%= bookwork.library_id %></td>
-    <td><%= bookwork.bookstore_id %></td>
+    <td><%= bookwork.library.library_details %></td>
+    <td><%= bookwork.bookstore.name %></td>
     <td><%= link_to 'Show', bookwork %></td>
     <td><%= link_to 'Edit', edit_bookwork_path(bookwork) %></td>
     <td><%= link_to 'Destroy', bookwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>

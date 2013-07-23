@@ -7,6 +7,6 @@ class Library < ActiveRecord::Base
 
   public
   def library_details
-    [name, campus_detail.name].join(" ")
+    [name, campus_detail.name].join(" in ")
   end
 end

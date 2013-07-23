@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130721015427) do
+ActiveRecord::Schema.define(:version => 20130722000001) do
 
   create_table "author_roles", :force => true do |t|
     t.string   "role"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20130721015427) do
     t.string   "publisher_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "book_edition"
   end
 
   create_table "book_formats", :force => true do |t|
